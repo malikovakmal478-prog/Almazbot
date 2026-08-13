@@ -3,7 +3,7 @@ from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeybo
 import sqlite3
 
 # ================= SOZLAMALAR =================
-BOT_TOKEN = '8844914761:AAF5d8lG00n6NlPMqEHIB53fRfIEz7LcGTw'
+BOT_TOKEN = '8844914761:AAGJsUHzUX8YpOa9m8yNf1Q1Xh-LmvioFlA'
 ADMIN_ID = 7915255052  # Sizning Telegram ID raqamingiz
 
 CHANNELS = ["@d1ma_sultanov", "@d1ma_almazlar", "@ffuzbkzorg"]
