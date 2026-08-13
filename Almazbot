@@ -1,11 +1,11 @@
 import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup, KeyboardButton
 import sqlite3
-import os
 
 # ================= SOZLAMALAR =================
 BOT_TOKEN = '8844914761:AAF5d8lG00n6NlPMqEHIB53fRfIEz7LcGTw'
 ADMIN_ID = 7915255052  # Sizning Telegram ID raqamingiz
+
 CHANNELS = ["@d1ma_sultanov", "@d1ma_almazlar", "@ffuzbkzorg"]
 PAYMENTS_CHANNEL = '@ffuzbkzorg'  # To'lovlar boradigan kanal
 MIN_WITHDRAW = 210
@@ -147,4 +147,6 @@ def admin_approval(call):
         bot.edit_message_text(f"❌ {target_user} ning so'rovi rad etildi.", ADMIN_ID, call.message.message_id)
         bot.send_message(target_user, "❌ Almaz yechish so'rovingiz admin tomonidan rad etildi.")
 
-bot.polling(none_stop=True)
+# Eski ulanishlarni tozalash va botni xavfsiz ishga tushirish uchun
+bot.remove_webhook()
+bot.infinity_polling(skip_pending=True)
